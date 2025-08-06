@@ -1,0 +1,151 @@
+:root {
+	--bg: #0d1117;
+	--bg-secondary: #161b22;
+	--text: #c9d1d9;
+	--text-muted: #8b949e;
+	--accent: #238636;
+	--danger: #f85149;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: system-ui, sans-serif;
+	margin: 0;
+	padding: 1rem;
+}
+
+.container {
+	max-width: 600px;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.5rem;
+	color: var(--text);
+}
+
+.input-group {
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+input {
+	flex: 1;
+	padding: 0.75rem;
+	background: var(--bg-secondary);
+	color: var(--text);
+	border: 1px solid #30363d;
+	border-radius: 6px 0 0 6px;
+	outline: none;
+}
+
+.listItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--bg-secondary);
+	border: 1px solid #30363d;
+	border-radius: 6px;
+	padding: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.listItem input[type="checkbox"] {
+	width: 10%;
+	opacity: 0.3;
+}
+
+.listItem span {
+	width: 85%;
+	overflow-wrap: anywhere;
+	font-weight: 100;
+	font: system-ui;
+}
+
+.listItem button {
+	width: 5%;
+	background: none;
+	border: none;
+	color: var(--danger);
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+button.add {
+	padding: 0.75rem 1rem;
+	background-color: var(--accent);
+	color: #fff;
+	/* border: none; */
+	border-radius: 0 6px 6px 0;
+	cursor: pointer;
+}
+
+button.add:hover {
+	background-color: #2ea043;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	background: var(--bg-secondary);
+	border: 1px solid #30363d;
+	border-radius: 6px;
+	padding: 0.75rem;
+	margin-bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	flex: 1;
+}
+
+.done {
+	text-decoration: line-through;
+	color: var(--text-muted);
+}
+
+input[type="checkbox"] {
+	width: 1.2rem;
+	height: 1.2rem;
+	accent-color: var(--accent);
+}
+
+button.remove {
+	background: none;
+	border: none;
+	color: var(--danger);
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+button.remove:hover {
+	color: #ff7b72;
+}
+
+@media (max-width: 480px) {
+	h1 {
+	font-size: 1.2rem;
+	}
+	input {
+	font-size: 1rem;
+	}
+	li {
+	font-size: 0.95rem;
+	}
+}
